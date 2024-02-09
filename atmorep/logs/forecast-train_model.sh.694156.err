@@ -1,0 +1,337 @@
++ '[' -z '' ']'
++ case "$-" in
++ __lmod_vx=x
++ '[' -n x ']'
++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for this output (/usr/share/lmod/lmod/init/bash)
+Shell debugging restarted
++ unset __lmod_vx
++ source /mnt/tier2/project/p200233/P1/V2/atmorep/pyenv/bin/activate
+++ deactivate nondestructive
+++ '[' -n '' ']'
+++ '[' -n '' ']'
+++ '[' -n /bin/bash -o -n '' ']'
+++ hash -r
+++ '[' -n '' ']'
+++ unset VIRTUAL_ENV
+++ unset VIRTUAL_ENV_PROMPT
+++ '[' '!' nondestructive = nondestructive ']'
+++ VIRTUAL_ENV=/mnt/tier2/users/u101120/P1/V2/atmorep/pyenv
+++ export VIRTUAL_ENV
+++ _OLD_VIRTUAL_PATH=/apps/installs/software/myquota/0.3.1/bin:/opt/software/xxl/run:/specific/bin:/home/users/u101120/.local/bin:/home/users/u101120/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/software/xxl/system:/opt/software/xxl/fs
+++ PATH=/mnt/tier2/users/u101120/P1/V2/atmorep/pyenv/bin:/apps/installs/software/myquota/0.3.1/bin:/opt/software/xxl/run:/specific/bin:/home/users/u101120/.local/bin:/home/users/u101120/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/software/xxl/system:/opt/software/xxl/fs
+++ export PATH
+++ '[' -n '' ']'
+++ '[' -z '' ']'
+++ _OLD_VIRTUAL_PS1=
+++ PS1='(pyenv) '
+++ export PS1
+++ VIRTUAL_ENV_PROMPT='(pyenv) '
+++ export VIRTUAL_ENV_PROMPT
+++ '[' -n /bin/bash -o -n '' ']'
+++ hash -r
++ ml purge
+++ /usr/share/lmod/lmod/libexec/ml_cmd purge
++ eval 'module  purge'
+++ module purge
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+The following modules were not unloaded:
+  (Use "module --force purge" to unload all):
+
+  1) env/release/2022.1   2) lxp-tools/myquota/0.3.1
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
++ ml Python
+++ /usr/share/lmod/lmod/libexec/ml_cmd Python
++ eval 'module  load '\''Python'\'''
+++ module load Python
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
++ ml GCC
+++ /usr/share/lmod/lmod/libexec/ml_cmd GCC
++ eval 'module  load '\''GCC'\'''
+++ module load GCC
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
++ ml OpenMPI
+++ /usr/share/lmod/lmod/libexec/ml_cmd OpenMPI
++ eval 'module  load '\''OpenMPI'\'''
+++ module load OpenMPI
+++ '[' -z '' ']'
+++ case "$-" in
+++ __lmod_sh_dbg=x
+++ '[' -n x ']'
+++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
+++ unset __lmod_sh_dbg
+++ return 0
++ export OMP_NUM_THREADS=64
++ OMP_NUM_THREADS=64
++ export CUDA_VISIBLE_DEVICES=0,1,2,3
++ CUDA_VISIBLE_DEVICES=0,1,2,3
+++ scontrol show hostnames 'mel[2003-2004,2006,2009,2012,2014,2034,2039-2040,2043-2044,2047,2067,2069,2076,2080,2098,2103,2106,2115,2132-2133,2139,2141-2142,2163,2168,2172,2174,2185,2189,2196]'
+++ head -n 1
++ MASTER_ADDR=mel2003
+++ nslookup mel2003
+++ grep -oP '(?<=Address: ).*'
++ export MASTER_ADDR=10.3.40.3
++ MASTER_ADDR=10.3.40.3
++ export NCCL_DEBUG=TRACE
++ NCCL_DEBUG=TRACE
++ echo 'Starting job.'
++ echo 'Number of Nodes: 32'
++ echo 'Number of Tasks: 32'
++ date
++ srun --label --cpu-bind=v --accel-bind=v python -u /mnt/tier2/project/p200233/P1/V2/atmorep/atmorep/core/train.py
+ 0: cpu_bind=THREADS - mel2003, task  0  0 [13100]: mask 0x1 set
+ 4: cpu_bind=THREADS - mel2012, task  4  0 [22915]: mask 0x1 set
+13: cpu_bind=THREADS - mel2069, task 13  0 [18799]: mask 0x1 set
+20: cpu_bind=THREADS - mel2132, task 20  0 [31290]: mask 0x1 set
+ 8: cpu_bind=THREADS - mel2040, task  8  0 [31056]: mask 0x1 set
+ 2: cpu_bind=THREADS - mel2006, task  2  0 [5580]: mask 0x1 set
+23: cpu_bind=THREADS - mel2141, task 23  0 [23214]: mask 0x1 set
+ 6: cpu_bind=THREADS - mel2034, task  6  0 [19224]: mask 0x1 set
+12: cpu_bind=THREADS - mel2067, task 12  0 [27262]: mask 0x1 set
+15: cpu_bind=THREADS - mel2080, task 15  0 [8435]: mask 0x1 set
+11: cpu_bind=THREADS - mel2047, task 11  0 [14119]: mask 0x1 set
+18: cpu_bind=THREADS - mel2106, task 18  0 [20394]: mask 0x1 set
+19: cpu_bind=THREADS - mel2115, task 19  0 [3940]: mask 0x1 set
+17: cpu_bind=THREADS - mel2103, task 17  0 [17549]: mask 0x1 set
+25: cpu_bind=THREADS - mel2163, task 25  0 [4206]: mask 0x1 set
+14: cpu_bind=THREADS - mel2076, task 14  0 [24101]: mask 0x1 set
+16: cpu_bind=THREADS - mel2098, task 16  0 [26186]: mask 0x1 set
+30: cpu_bind=THREADS - mel2189, task 30  0 [7973]: mask 0x1 set
+ 9: cpu_bind=THREADS - mel2043, task  9  0 [19676]: mask 0x1 set
+26: cpu_bind=THREADS - mel2168, task 26  0 [11415]: mask 0x1 set
+27: cpu_bind=THREADS - mel2172, task 27  0 [10095]: mask 0x1 set
+ 1: cpu_bind=THREADS - mel2004, task  1  0 [25154]: mask 0x1 set
+10: cpu_bind=THREADS - mel2044, task 10  0 [30041]: mask 0x1 set
+31: cpu_bind=THREADS - mel2196, task 31  0 [5971]: mask 0x1 set
+24: cpu_bind=THREADS - mel2142, task 24  0 [9344]: mask 0x1 set
+22: cpu_bind=THREADS - mel2139, task 22  0 [14499]: mask 0x1 set
+ 3: cpu_bind=THREADS - mel2009, task  3  0 [17335]: mask 0x1 set
+ 7: cpu_bind=THREADS - mel2039, task  7  0 [22612]: mask 0x1 set
+29: cpu_bind=THREADS - mel2185, task 29  0 [8841]: mask 0x1 set
+21: cpu_bind=THREADS - mel2133, task 21  0 [20942]: mask 0x1 set
+ 5: cpu_bind=THREADS - mel2014, task  5  0 [15615]: mask 0x1 set
+28: cpu_bind=THREADS - mel2174, task 28  0 [25211]: mask 0x1 set
+ 0: wandb: Tracking run with wandb version 0.16.1
+ 0: wandb: W&B syncing is set to `offline` in this directory.  
+ 0: wandb: Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+20: /home/users/u101120/.local/lib/python3.10/site-packages/gribapi/__init__.py:23: UserWarning: ecCodes 2.31.0 or higher is recommended. You are running version 2.30.0
+20:   warnings.warn(
+22: /home/users/u101120/.local/lib/python3.10/site-packages/gribapi/__init__.py:23: UserWarning: ecCodes 2.31.0 or higher is recommended. You are running version 2.30.0
+22:   warnings.warn(
+27: /home/users/u101120/.local/lib/python3.10/site-packages/gribapi/__init__.py:23: UserWarning: ecCodes 2.31.0 or higher is recommended. You are running version 2.30.0
+27:   warnings.warn(
+ 4: /home/users/u101120/.local/lib/python3.10/site-packages/gribapi/__init__.py:23: UserWarning: ecCodes 2.31.0 or higher is recommended. You are running version 2.30.0
+ 4:   warnings.warn(
+13: /home/users/u101120/.local/lib/python3.10/site-packages/gribapi/__init__.py:23: UserWarning: ecCodes 2.31.0 or higher is recommended. You are running version 2.30.0
+13:   warnings.warn(
+ 5: /home/users/u101120/.local/lib/python3.10/site-packages/gribapi/__init__.py:23: UserWarning: ecCodes 2.31.0 or higher is recommended. You are running version 2.30.0
+ 5:   warnings.warn(
+12: /home/users/u101120/.local/lib/python3.10/site-packages/gribapi/__init__.py:23: UserWarning: ecCodes 2.31.0 or higher is recommended. You are running version 2.30.0
+12:   warnings.warn(
+ 6: /home/users/u101120/.local/lib/python3.10/site-packages/gribapi/__init__.py:23: UserWarning: ecCodes 2.31.0 or higher is recommended. You are running version 2.30.0
+ 6:   warnings.warn(
+31: /home/users/u101120/.local/lib/python3.10/site-packages/gribapi/__init__.py:23: UserWarning: ecCodes 2.31.0 or higher is recommended. You are running version 2.30.0
+31:   warnings.warn(
+ 1: /home/users/u101120/.local/lib/python3.10/site-packages/gribapi/__init__.py:23: UserWarning: ecCodes 2.31.0 or higher is recommended. You are running version 2.30.0
+ 1:   warnings.warn(
+24: /home/users/u101120/.local/lib/python3.10/site-packages/gribapi/__init__.py:23: UserWarning: ecCodes 2.31.0 or higher is recommended. You are running version 2.30.0
+24:   warnings.warn(
+15: /home/users/u101120/.local/lib/python3.10/site-packages/gribapi/__init__.py:23: UserWarning: ecCodes 2.31.0 or higher is recommended. You are running version 2.30.0
+15:   warnings.warn(
+10: /home/users/u101120/.local/lib/python3.10/site-packages/gribapi/__init__.py:23: UserWarning: ecCodes 2.31.0 or higher is recommended. You are running version 2.30.0
+10:   warnings.warn(
+19: /home/users/u101120/.local/lib/python3.10/site-packages/gribapi/__init__.py:23: UserWarning: ecCodes 2.31.0 or higher is recommended. You are running version 2.30.0
+19:   warnings.warn(
+30: /home/users/u101120/.local/lib/python3.10/site-packages/gribapi/__init__.py:23: UserWarning: ecCodes 2.31.0 or higher is recommended. You are running version 2.30.0
+30:   warnings.warn(
+ 3: /home/users/u101120/.local/lib/python3.10/site-packages/gribapi/__init__.py:23: UserWarning: ecCodes 2.31.0 or higher is recommended. You are running version 2.30.0
+ 3:   warnings.warn(
+ 8: /home/users/u101120/.local/lib/python3.10/site-packages/gribapi/__init__.py:23: UserWarning: ecCodes 2.31.0 or higher is recommended. You are running version 2.30.0
+ 8:   warnings.warn(
+17: /home/users/u101120/.local/lib/python3.10/site-packages/gribapi/__init__.py:23: UserWarning: ecCodes 2.31.0 or higher is recommended. You are running version 2.30.0
+17:   warnings.warn(
+25: /home/users/u101120/.local/lib/python3.10/site-packages/gribapi/__init__.py:23: UserWarning: ecCodes 2.31.0 or higher is recommended. You are running version 2.30.0
+25:   warnings.warn(
+ 2: /home/users/u101120/.local/lib/python3.10/site-packages/gribapi/__init__.py:23: UserWarning: ecCodes 2.31.0 or higher is recommended. You are running version 2.30.0
+ 2:   warnings.warn(
+16: /home/users/u101120/.local/lib/python3.10/site-packages/gribapi/__init__.py:23: UserWarning: ecCodes 2.31.0 or higher is recommended. You are running version 2.30.0
+16:   warnings.warn(
+28: /home/users/u101120/.local/lib/python3.10/site-packages/gribapi/__init__.py:23: UserWarning: ecCodes 2.31.0 or higher is recommended. You are running version 2.30.0
+28:   warnings.warn(
+26: /home/users/u101120/.local/lib/python3.10/site-packages/gribapi/__init__.py:23: UserWarning: ecCodes 2.31.0 or higher is recommended. You are running version 2.30.0
+26:   warnings.warn(
+29: /home/users/u101120/.local/lib/python3.10/site-packages/gribapi/__init__.py:23: UserWarning: ecCodes 2.31.0 or higher is recommended. You are running version 2.30.0
+29:   warnings.warn(
+ 7: /home/users/u101120/.local/lib/python3.10/site-packages/gribapi/__init__.py:23: UserWarning: ecCodes 2.31.0 or higher is recommended. You are running version 2.30.0
+ 7:   warnings.warn(
+21: /home/users/u101120/.local/lib/python3.10/site-packages/gribapi/__init__.py:23: UserWarning: ecCodes 2.31.0 or higher is recommended. You are running version 2.30.0
+21:   warnings.warn(
+11: /home/users/u101120/.local/lib/python3.10/site-packages/gribapi/__init__.py:23: UserWarning: ecCodes 2.31.0 or higher is recommended. You are running version 2.30.0
+11:   warnings.warn(
+14: /home/users/u101120/.local/lib/python3.10/site-packages/gribapi/__init__.py:23: UserWarning: ecCodes 2.31.0 or higher is recommended. You are running version 2.30.0
+14:   warnings.warn(
+ 0: /home/users/u101120/.local/lib/python3.10/site-packages/gribapi/__init__.py:23: UserWarning: ecCodes 2.31.0 or higher is recommended. You are running version 2.30.0
+ 0:   warnings.warn(
+ 9: /home/users/u101120/.local/lib/python3.10/site-packages/gribapi/__init__.py:23: UserWarning: ecCodes 2.31.0 or higher is recommended. You are running version 2.30.0
+ 9:   warnings.warn(
+23: /home/users/u101120/.local/lib/python3.10/site-packages/gribapi/__init__.py:23: UserWarning: ecCodes 2.31.0 or higher is recommended. You are running version 2.30.0
+23:   warnings.warn(
+18: /home/users/u101120/.local/lib/python3.10/site-packages/gribapi/__init__.py:23: UserWarning: ecCodes 2.31.0 or higher is recommended. You are running version 2.30.0
+18:   warnings.warn(
+22: /home/users/u101120/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py:560: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+22:   warnings.warn(_create_warning_msg(
+18: /home/users/u101120/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py:560: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+18:   warnings.warn(_create_warning_msg(
+26: /home/users/u101120/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py:560: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+26:   warnings.warn(_create_warning_msg(
+15: /home/users/u101120/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py:560: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+15:   warnings.warn(_create_warning_msg(
+29: /home/users/u101120/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py:560: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+29:   warnings.warn(_create_warning_msg(
+21: /home/users/u101120/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py:560: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+21:   warnings.warn(_create_warning_msg(
+ 9: /home/users/u101120/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py:560: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+ 9:   warnings.warn(_create_warning_msg(
+16: /home/users/u101120/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py:560: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+16:   warnings.warn(_create_warning_msg(
+30: /home/users/u101120/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py:560: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+30:   warnings.warn(_create_warning_msg(
+31: /home/users/u101120/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py:560: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+31:   warnings.warn(_create_warning_msg(
+17: /home/users/u101120/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py:560: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+17:   warnings.warn(_create_warning_msg(
+28: /home/users/u101120/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py:560: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+28:   warnings.warn(_create_warning_msg(
+14: /home/users/u101120/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py:560: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+14:   warnings.warn(_create_warning_msg(
+23: /home/users/u101120/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py:560: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+23:   warnings.warn(_create_warning_msg(
+ 7: /home/users/u101120/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py:560: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+ 7:   warnings.warn(_create_warning_msg(
+13: /home/users/u101120/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py:560: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+13:   warnings.warn(_create_warning_msg(
+19: /home/users/u101120/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py:560: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+19:   warnings.warn(_create_warning_msg(
+20: /home/users/u101120/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py:560: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+20:   warnings.warn(_create_warning_msg(
+24: /home/users/u101120/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py:560: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+24:   warnings.warn(_create_warning_msg(
+27: /home/users/u101120/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py:560: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+27:   warnings.warn(_create_warning_msg(
+ 3: /home/users/u101120/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py:560: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+ 3:   warnings.warn(_create_warning_msg(
+ 2: /home/users/u101120/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py:560: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+ 2:   warnings.warn(_create_warning_msg(
+25: /home/users/u101120/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py:560: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+25:   warnings.warn(_create_warning_msg(
+ 4: /home/users/u101120/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py:560: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+ 4:   warnings.warn(_create_warning_msg(
+ 8: /home/users/u101120/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py:560: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+ 8:   warnings.warn(_create_warning_msg(
+ 1: /home/users/u101120/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py:560: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+ 1:   warnings.warn(_create_warning_msg(
+ 6: /home/users/u101120/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py:560: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+ 6:   warnings.warn(_create_warning_msg(
+10: /home/users/u101120/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py:560: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+10:   warnings.warn(_create_warning_msg(
+ 5: /home/users/u101120/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py:560: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+ 5:   warnings.warn(_create_warning_msg(
+12: /home/users/u101120/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py:560: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+12:   warnings.warn(_create_warning_msg(
+11: /home/users/u101120/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py:560: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+11:   warnings.warn(_create_warning_msg(
+ 0: /home/users/u101120/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py:560: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+ 0:   warnings.warn(_create_warning_msg(
+12: Traceback (most recent call last):
+12:   File "/mnt/tier2/project/p200233/P1/V2/atmorep/atmorep/core/train.py", line 241, in <module>
+12:     train()
+12:   File "/mnt/tier2/project/p200233/P1/V2/atmorep/atmorep/core/train.py", line 236, in train
+12:     trainer.run()
+12:   File "/mnt/tier2/project/p200233/P1/V2/atmorep/atmorep/core/trainer.py", line 174, in run
+12:     cur_test_loss = self.validate( epoch, cf.BERT_strategy).cpu().numpy()
+12:   File "/mnt/tier2/project/p200233/P1/V2/atmorep/atmorep/core/trainer.py", line 391, in validate
+12:     batch_data = self.model.next()
+12:   File "/mnt/tier2/project/p200233/P1/V2/atmorep/atmorep/core/atmorep_model.py", line 188, in next
+12:     return next(self.data_loader_iter)
+12:   File "/home/users/u101120/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 633, in __next__
+12:     data = self._next_data()
+12:   File "/home/users/u101120/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1345, in _next_data
+12:     return self._process_data(data)
+12:   File "/home/users/u101120/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1371, in _process_data
+12:     data.reraise()
+12:   File "/home/users/u101120/.local/lib/python3.10/site-packages/torch/_utils.py", line 644, in reraise
+12:     raise exception
+12: IndexError: Caught IndexError in DataLoader worker process 4.
+12: Original Traceback (most recent call last):
+12:   File "/home/users/u101120/.local/lib/python3.10/site-packages/torch/utils/data/_utils/worker.py", line 308, in _worker_loop
+12:     data = fetcher.fetch(index)
+12:   File "/home/users/u101120/.local/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 41, in fetch
+12:     data = next(self.dataset_iter)
+12:   File "/mnt/tier2/project/p200233/P1/V2/atmorep/atmorep/datasets/multifield_data_sampler.py", line 485, in __iter__
+12:     sources.append( [ds_level[bidx] for ds_level in ds_field])
+12:   File "/mnt/tier2/project/p200233/P1/V2/atmorep/atmorep/datasets/multifield_data_sampler.py", line 485, in <listcomp>
+12:     sources.append( [ds_level[bidx] for ds_level in ds_field])
+12:   File "/mnt/tier2/project/p200233/P1/V2/atmorep/atmorep/datasets/dynamic_field_level.py", line 225, in __getitem__
+12:     x[jj] = np.take( np.take( self.data_field[i_ym][ran_t], ran_lat, 1), ran_lon, 2)
+12: IndexError: index 779 is out of bounds for dimension 0 with size 779
+12: 
+srun: error: mel2067: task 12: Exited with exit code 1
+srun: error: mel2196: task 31: Terminated
+srun: error: mel2034: task 6: Terminated
+srun: error: mel2044: task 10: Terminated
+srun: error: mel2115: task 19: Terminated
+srun: error: mel2069: task 13: Terminated
+srun: error: mel2004: task 1: Terminated
+srun: error: mel2103: task 17: Terminated
+srun: error: mel2009: task 3: Terminated
+srun: error: mel2080: task 15: Terminated
+srun: error: mel2012: task 4: Terminated
+srun: error: mel2189: task 30: Terminated
+srun: error: mel2098: task 16: Terminated
+srun: error: mel2006: task 2: Terminated
+srun: error: mel2039: task 7: Terminated
+srun: error: mel2040: task 8: Terminated
+srun: error: mel2174: task 28: Terminated
+srun: error: mel2133: task 21: Terminated
+srun: error: mel2132: task 20: Terminated
+srun: error: mel2168: task 26: Terminated
+srun: error: mel2106: task 18: Terminated
+srun: error: mel2139: task 22: Terminated
+srun: error: mel2141: task 23: Terminated
+srun: error: mel2076: task 14: Terminated
+srun: error: mel2047: task 11: Terminated
+srun: error: mel2014: task 5: Terminated
+srun: error: mel2163: task 25: Terminated
+srun: error: mel2185: task 29: Terminated
+srun: error: mel2043: task 9: Terminated
+srun: error: mel2142: task 24: Terminated
+srun: error: mel2172: task 27: Terminated
+srun: error: mel2003: task 0: Terminated
+srun: Force Terminated StepId=694156.0
++ echo 'Finished job.'
++ date
