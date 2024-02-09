@@ -1,0 +1,12 @@
+Download Cosmo Data like this:
+wget -r --no-parent -nH --cut-dirs=5 --reject "index.html*" https://opendata.dwd.de/climate_environment/REA/COSMO_REA6/hourly/3D/T/1995
+
+Then adapt and execute shell scripts in that order 
+
+1.) ./parallized_data_processing.sh
+1.5) Make sure every hour file is in the correct year
+2.) ./merge_cosmo_data.sh or TOT_data_processing.sh (only for TOT_PRECIP)
+3.) ./calc_mean_std_cosmo_data.sh
+4.) python3 convert_nc4_to_bin.py 1995,1996 T 35,36,37,38,39,40
+
+DONE
